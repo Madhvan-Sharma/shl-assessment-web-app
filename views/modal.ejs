@@ -1,0 +1,72 @@
+<% for(let i=0 ;i < projects.length ; i++){ %>
+
+    <!-- First comes the modal -->
+    <div class="modal" id="modal-for-<%= projects[i].id %>" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" role="button" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+                <h1 class="modal-title font-size-24">
+                    <%= projects[i].title %>
+                </h1>
+                <!-- technologies -->
+                <div class="card p-0 m-0 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title font-size-18 font-weight-bold">Technologies</h5>
+                        <p class="card-text d-grid">
+                            
+                            <% for(let tech of projects[i].technologies){ %>
+                                <span class="badge text-bg-info"><%= tech %></span>
+                            <% } %>
+                        </p>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <!-- Technical skillset:Frontend -->
+                <div class="card p-0 m-0 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title font-size-18 font-weight-bold">Technical Skillset</h5>
+
+                        <h5 class="card-title font-size-14">Frontend</h5>
+                        <p class="card-text d-grid">
+                            
+                            <% for(let skill of projects[i].technical_skillset.frontend){ %>
+                                <span class="badge text-bg-info"><%= skill %></span>
+                            <% } %>
+                        </p>
+
+                        <h5 class="card-title font-size-14">Backend</h5>
+                        <p class="card-text d-grid">
+                            
+                            <% for(let skill of projects[i].technical_skillset.backend){ %>
+                                <span class="badge text-bg-info"><%= skill %></span>
+                            <% } %>
+                        </p>
+
+                        <h5 class="card-title font-size-14">Databases</h5>
+                        <p class="card-text d-grid">
+                            
+                            <% for(let skill of projects[i].technical_skillset.databases){ %>
+                                <span class="badge text-bg-info"><%= skill %></span>
+                            <% } %>
+                        </p>
+
+                        <h5 class="card-title font-size-14">Infrastructure</h5>
+                        <p class="card-text d-grid">
+                            
+                            <% for(let skill of projects[i].technical_skillset.infrastructure){ %>
+                                <span class="badge text-bg-info"><%= skill %></span>
+                            <% } %>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<% } %>
