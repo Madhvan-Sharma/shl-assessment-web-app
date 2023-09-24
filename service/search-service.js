@@ -9,7 +9,7 @@ const fuseOptions = {
 	// findAllMatches: false,
 	// minMatchCharLength: 1,
 	// location: 0,
-	threshold: 0.5,
+	threshold: process.env.SEARCH_QUERY_THRESHOLD,
 	// distance: 100,
 	// useExtendedSearch: false,
 	// ignoreLocation: false,
