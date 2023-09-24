@@ -31,15 +31,11 @@
         
         <!-- Navbar start -->
         <nav class="navbar">
-            <div class="navbar-content">
-                <button id="toggle-sidebar-btn" class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </button>
-            </div>
+            
             <a href="/" class="navbar-brand ml-10 ml-sm-20">
-                <span class="d-none d-sm-flex font-weight-600">
+                <span class="d-sm-flex font-weight-600">
                     <img src="https://res.cloudinary.com/art-gallery-madhvan/image/upload/v1619870601/logo_n089st.svg" class="mt-5" alt="brand-logo">
-                    Projects
+                    <span class="d-none d-sm-flex">Projects</span>
                 </span>
             </a>
 
@@ -51,7 +47,7 @@
                 </button>
                 
 
-                <form class="form-inline d-none d-md-flex ml-auto" action="/search/search-all" method="get"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
+                <form class="form-inline d-md-flex ml-auto" action="/search/search-all" method="get"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
                     <input type="text" class="form-control" name="q" placeholder="Smart Search" required="required">
                     <button class="btn btn-primary" type="submit">Search</button>
                 </form>
